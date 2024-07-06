@@ -27,7 +27,7 @@ useEffect(() => {
       <h1>Vite + React</h1>
     <h1>Inventario</h1>
     <ul>
-      {info.map(inf => (
+      {info.map(inf=> (
         <li key={inf.id}>
           {inf.unidad} {inf.ici} {inf.ciudad}
         </li>
