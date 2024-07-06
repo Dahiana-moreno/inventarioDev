@@ -10,7 +10,7 @@ const app = express()
 
 const PORT = process.env.PORT
 const URIFRONT = process.env.URI_FRONT
-const HOST = process.env.MYSQLHOST
+const HOST = process.env.DB_HOST
 app.use(cors({
   origin: URIFRONT
 }))
