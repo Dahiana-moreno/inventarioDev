@@ -10,7 +10,7 @@ const app = express()
 
 const PORT = process.env.PORT
 const URIFRONT = process.env.URI_FRONT
-
+const HOST = process.env.DB_HOST
 app.use(cors({
   origin: URIFRONT
 }))
@@ -35,7 +35,7 @@ try {
 } catch (error) {
   console.log(`Error en la conexion a la db ${error}`)
 }
-
+console.log(`Host de conexion ${HOST}`)
 
 app.listen(PORT, () => {
   console.log(`server init on port ${PORT}`)
