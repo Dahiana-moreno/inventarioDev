@@ -7,7 +7,7 @@ function App() {
 
   const [info, setInfo] = useState([]);
 useEffect(() => {
-  axios.get(import.meta.env.VITE_URL_BACKEND)
+  axios.get(import.meta.env.VITE_URL)
   .then(res => {
     setInfo(res.data)
   })
@@ -19,7 +19,7 @@ useEffect(() => {
     <>
       <div className='App'>
        <button onClick={async () => {
-        const res = await fetch(`${import.meta.env.VITE_REACT_APP_URL_BACKEND}/inventory`)
+        const res = await fetch(`${import.meta.env.VITE_BACKEND}/inventory`)
         const data = await res.json()
         console.log(data)
        }}>Users</button> 
